@@ -11,12 +11,16 @@ from pathlib import Path
 
 # Application Directory
 df = palmerpenguins.load_penguins()
-#
 app_dir = Path(__file__).parent
+
+# Include the CSS
 ui.include_css(app_dir / "styles.css")
 
-# Application UI
+# Set up page layout once
 ui.page_opts(title="Penguins Dashboard", fillable=True)
+
+# ✅ Add banner div immediately after setting page layout
+ui.tags.div(id="penguin-banner")
 
 # Sidebar with Filter Controls
 with ui.sidebar(title="Filter Controls"):
