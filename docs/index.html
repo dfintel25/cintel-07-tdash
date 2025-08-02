@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shiny App</title>
     <base href="/cintel-07-tdash/">
-    
+
     <script
-      src="./shinylive/load-shinylive-sw.js"
+      src="shinylive/load-shinylive-sw.js"
       type="module"
     ></script>
     <script type="module">
-      import { runExportedApp } from "./shinylive/shinylive.js";
+      import { runExportedApp } from "shinylive/shinylive.js";
       runExportedApp({
         id: "root",
         appEngine: "pyodide",
