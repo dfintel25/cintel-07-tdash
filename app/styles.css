@@ -14,7 +14,7 @@ body {
     height: 200px; /* adjust height as needed */
     background-image: url("/penguins_banner.jpg"); /* path to your image */
     background-size: cover;
-    background-position: top center;
+    background-position: top 30% center;
     background-repeat: no-repeat;
     margin-bottom: 1rem;
     border-radius: 0 0 8px 8px;
