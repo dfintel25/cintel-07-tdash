@@ -6,9 +6,14 @@ from faicons import icon_svg
 from shiny import reactive
 from shiny.express import input, render, ui
 import palmerpenguins 
+from pathlib import Path
+
 
 # Application Directory
 df = palmerpenguins.load_penguins()
+#
+app_dir = Path(__file__).parent
+ui.include_css(app_dir / "styles.css")
 
 # Application UI
 ui.page_opts(title="Penguins Dashboard", fillable=True)
@@ -103,7 +108,7 @@ with ui.layout_columns():
             return render.DataGrid(filtered_df()[cols], filters=True)
 
 
-#ui.include_css(app_dir / "styles.css")
+ui.include_css(app_dir / "styles.css")
 
 # Reactive Calculation for Filtered DataFrame
 @reactive.calc
