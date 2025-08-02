@@ -59,7 +59,12 @@ with ui.sidebar(title="Filter Controls"):
         href="https://github.com/denisecase/pyshiny-penguins-dashboard-express",
         target="_blank",
     )
-
+    ui.a(
+        "Penguin Source Image",
+        href="https://images.app.goo.gl/bVAoJtehznnc1YeF9",
+        target="_blank",
+    )
+    
 # Layout for Summary Statistics
 with ui.layout_column_wrap(fill=False):
     with ui.value_box(showcase=icon_svg("earlybirds")):
